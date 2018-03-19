@@ -19,6 +19,7 @@
       MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion=$(MicrosoftAspNetCoreAuthenticationOpenIdConnectPackageVersion);
       MicrosoftAspNetCoreCookiePolicyPackageVersion=$(MicrosoftAspNetCoreCookiePolicyPackageVersion);
       MicrosoftAspNetCoreDiagnosticsEntityFrameworkCorePackageVersion=$(MicrosoftAspNetCoreDiagnosticsEntityFrameworkCorePackageVersion);
+      MicrosoftAspNetCoreHostFilteringPackageVersion=$(MicrosoftAspNetCoreHostFilteringPackageVersion);
       MicrosoftAspNetCoreHttpsPolicyPackageVersion=$(MicrosoftAspNetCoreHttpsPolicyPackageVersion);
       MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion=$(MicrosoftAspNetCoreIdentityEntityFrameworkCorePackageVersion);
       MicrosoftAspNetCoreMvcPackageVersion=$(MicrosoftAspNetCoreMvcPackageVersion);

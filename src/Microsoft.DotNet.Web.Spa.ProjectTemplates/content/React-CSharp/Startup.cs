@@ -27,11 +27,18 @@ namespace Company.WebApplication1
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddHostFiltering(options =>
+            {
+                options.AllowedHosts = Config.GetSection("AllowedHosts").Get<List<string>>();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // For use with publicly exposed servers that are not restricting the Host header.
+            app.UseHostFiltering();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

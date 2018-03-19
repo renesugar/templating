@@ -78,12 +78,20 @@ namespace Company.WebApplication1
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddHostFiltering(options =>
+            {
+                options.AllowedHosts = Config.GetSection("AllowedHosts").Get<List<string>>();
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // For use with publicly exposed servers that are not restricting the Host header.
+            app.UseHostFiltering();
+
             if (env.IsDevelopment())
             {
 #if (UseBrowserLink)
